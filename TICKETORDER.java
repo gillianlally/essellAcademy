@@ -7,11 +7,13 @@ import javax.swing.JOptionPane;
 public class TICKETORDER 
 { 
     private String customerID ;
-    private char ticketID ;
+    private String ticketID ;
+    private char tID ;
     private int noOfTickets ;
     private String methodOfPurchase ;
     public TICKETORDER ()
     { 
-        //constructor
+        customerID = "" ;
+        tID = ' ' ;
     }
 }
