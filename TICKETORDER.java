@@ -15,5 +15,8 @@ public class TICKETORDER
     { 
         customerID = "" ;
         tID = ' ' ;
+        ticketID = "" ;
+        noOfTickets = 0 ;
+        methodOfPurchase = "" ;
     }
 }
