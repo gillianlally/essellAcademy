@@ -1,4 +1,10 @@
 #BlueJ class context
 comment0.params=
 comment0.target=TICKETORDER()
-numComments=1
+comment1.params=dataItems
+comment1.target=void\ readTICKETORDERDetails(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ writeDetails()
+comment3.params=
+comment3.target=java.lang.String\ getmethodOfPurchase()
+numComments=4
