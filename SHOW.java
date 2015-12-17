@@ -7,35 +7,57 @@ public class SHOW
 
     private TICKETORDER ticketorderList [] ;
     private int noOfTicketsOrdered ; 
+
     private int purchaseMethodW ;
     private int purchaseMethodS ;
     private String mostPopular ;
     private int Total ;
-    
+
     FILEREADCSV purchaseFile ;
-    
+
     FILEWRITECSV resultsFile ; 
 
-    public SHOW() throws IOException
+    public SHOW() 
     {  
-        purchaseMethodFile = new FILEREADCSV () ;
-        resultsFile = new FILEWRITECSV () ;
-        Total = 0 ;
-        purchaseMethodW = 0 ;
-        purchaseMethodS = 0 ;
-        noOfTicketsOrdered = 0 ;
-        mostPopular = "" ;
+        purchaseFile = new FILEREADCSV () ;
     }
 
-    public void processticketOrder () 
+    public void processTICKETORDER () throws IOException
     {
-        setUpticketOrderList () ;
+        setUpticketorderList () ;
+        countmethodOfPurchase () ;
+
+    }
+
+    public void setUpticketorderList () throws IOException
+    {
+        System.out.println("Essell Academy: Show update") ;
+        System.out.println("** Preparing to read data file") ;
         
-
+        String[] dataRows = purchaseFile.readCSVtable () ;
+        noOfTicketsOrdered = dataRows.length ;
+        
+        System.out.println("**" + noOfTicketsOrdered + "rows read. \n\n") ;
+        
+        ticketorderList = new TICKETORDER[noOfTicketsOrdered] ;
+        
+        for (int i = 0 ; i < noOfTicketsOrdered ; i++) {
+        
+        ticketorderList[i] = new TICKETORDER () ;
+        
+        ticketorderList[i].readTICKETORDERDetails(dataRows[i]) ;
+        
+        }
     }
 
-    public void setUpticketorder () 
+    public void countmethodOfPurchase ()
     {
-        //
+        // 
     }
+
+    
 }
+
+
+
+
