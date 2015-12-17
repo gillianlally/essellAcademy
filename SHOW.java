@@ -33,31 +33,56 @@ public class SHOW
     {
         System.out.println("Essell Academy: Show update") ;
         System.out.println("** Preparing to read data file") ;
-        
+
         String[] dataRows = purchaseFile.readCSVtable () ;
         noOfTicketsOrdered = dataRows.length ;
-        
+
         System.out.println("**" + noOfTicketsOrdered + "rows read. \n\n") ;
-        
+
         ticketorderList = new TICKETORDER[noOfTicketsOrdered] ;
-        
+
         for (int i = 0 ; i < noOfTicketsOrdered ; i++) {
-        
-        ticketorderList[i] = new TICKETORDER () ;
-        
-        ticketorderList[i].readTICKETORDERDetails(dataRows[i]) ;
-        
+
+            ticketorderList[i] = new TICKETORDER () ;
+
+            ticketorderList[i].readTICKETORDERDetails(dataRows[i]) ;
+
         }
     }
 
     public void countmethodOfPurchase ()
     {
-        // 
+        // loop for each item : TICKETORDER
+
+        for ( int i = 0 ; i < noOfTicketsOrdered ; i++  ) 
+        {
+            if (ticketorderList[i].getmethodOfPurchase() == "S" )
+            {
+                purchaseMethodS = purchaseMethodS + 1 ; 
+            }
+            else 
+            {
+                purchaseMethodW = purchaseMethodW + 1 ; 
+            }
+
+            if (purchaseMethodS > purchaseMethodW)
+            {
+                //display purchase method S
+                System.out.println("The most popular method of sale is sold in school") ;
+            }
+        
+            if ( purchaseMethodW > purchaseMethodS) 
+            {
+              // display purchase method W
+              System.out.println("The most popular method of sale is sold through the website  ") ;
+            }
+            
+            if (purchaseMethodS == purchaseMethodW)
+            {
+             // display purchase method S and W
+            }
+
+        }
+
     }
-
-    
 }
-
-
-
-
