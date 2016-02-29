@@ -1,4 +1,4 @@
-import javax.swing.JOptionPane;    
+    import javax.swing.JOptionPane;    
 import java.io.* ;
 
 public class SHOW 
@@ -65,24 +65,29 @@ public class SHOW
                 purchaseMethodW = purchaseMethodW + 1 ; 
             }
 
-            if (purchaseMethodS > purchaseMethodW)
-            {
-                //display purchase method S
-                System.out.println("The most popular method of sale is sold in school") ;
-            }
-        
-            if ( purchaseMethodW > purchaseMethodS) 
-            {
-              // display purchase method W
-              System.out.println("The most popular method of sale is sold through the website  ") ;
-            }
             
-            if (purchaseMethodS == purchaseMethodW)
-            {
-             // display purchase method S and W
-            }
 
         }
 
+    }
+
+    public void calcMethod () {
+        if (purchaseMethodS > purchaseMethodW)
+        {
+            //display purchase method S
+            System.out.println("The most popular method of sale is sold in school") ;
+        }
+
+        if ( purchaseMethodW > purchaseMethodS) 
+        {
+            // display purchase method W
+            System.out.println("The most popular method of sale is sold through the website  ") ;
+        }
+
+        if (purchaseMethodS == purchaseMethodW)
+        {
+            // display purchase method S and W
+            System.out.println("Both methods are equally as popular") ;
+        } 
     }
 }
