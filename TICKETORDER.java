@@ -11,6 +11,7 @@ public class TICKETORDER
     private char tID ;
     private int noOfTickets ;
     private String methodOfPurchase ;
+    private char purchase ;
     public TICKETORDER ()
     { 
         customerID = "" ;
@@ -18,6 +19,7 @@ public class TICKETORDER
         ticketID = "" ;
         noOfTickets = 0 ;
         methodOfPurchase = "" ;
+        purchase = ' ' ;
     }
 
     public void readTICKETORDERDetails(String dataItems)
@@ -31,6 +33,8 @@ public class TICKETORDER
         ticketID = rowItems [1] ;
         noOfTickets =  Integer.parseInt(rowItems[2]) ;
         methodOfPurchase = rowItems[3] ; 
+        purchase = rowItems[3].charAt(0) ;
+        
     }
 
     public String writeDetails()
@@ -52,5 +56,14 @@ public class TICKETORDER
     {
         return methodOfPurchase ;
     }
-
+    
+ public char getPURCHASE ()
+ { 
+    return purchase ;
+    }
+    
+    public char gettID ()
+    {
+        return tID    ; 
+    }
 }
