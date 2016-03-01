@@ -30,11 +30,12 @@ public class SHOW
         resultsFile = new FILEWRITECSV();
 
     }
+
     public void processorder()  throws IOException
     {
         Ticketorder();
         countPURCHASE();
-        calcMETHOD();
+        calculateMostPopularMETHOD();
         saveNewMembers();
         getdate();
         Display();
@@ -123,7 +124,7 @@ public class SHOW
         System.out.println("** File written and closed.");
     }
 
-    public void calcMETHOD()
+    public void calculateMostPopularMETHOD()
     {
         if (purchaseMethodS > purchaseMethodW)
         {
