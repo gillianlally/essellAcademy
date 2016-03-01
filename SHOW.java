@@ -10,7 +10,7 @@ public class SHOW
     private int purchaseMethodW;
     private int Total;
     private int year;
-    private String MostPopularMethod;
+    private String MostPopularMethod ;
 
     // CLASSes to open, create, read/write, close files
     FILEREADCSV purchaseFile; 
