@@ -104,13 +104,13 @@ public class SHOW
     public void saveNewMembers() throws IOException
     {
         String fileContent = "";
-        int vcount = 0;
+        int count = 0;
         for (int i = 0; i < noOfTicketsOrdered; i++) 
         {
             if(ticketorderlist[i].gettID() == 'F' )
             {
-                vcount = vcount + 1;
-                if (vcount>1) 
+                count = count + 1;
+                if (count>1) 
                 {
                     fileContent = fileContent.concat("\n");
                 }
@@ -128,7 +128,7 @@ public class SHOW
     {
         if (purchaseMethodS > purchaseMethodW)
         {
-            MostPopularMethod = "sold in school office";
+            MostPopularMethod = "sold in school office   ";
         }
         else 
         {
