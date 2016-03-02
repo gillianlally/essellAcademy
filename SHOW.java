@@ -128,11 +128,11 @@ public class SHOW
     {
         if (purchaseMethodS > purchaseMethodW)
         {
-            MostPopularMethod = "sold in school";
+            MostPopularMethod = "sold in school office";
         }
         else 
         {
-            MostPopularMethod = "sold online";
+            MostPopularMethod = "sold through the school website";
         }
     }
 
