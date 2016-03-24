@@ -34,7 +34,7 @@ public class TICKETORDER
         noOfTickets =  Integer.parseInt(rowItems[2]) ;
         methodOfPurchase = rowItems[3] ; 
         purchase = rowItems[3].charAt(0) ;
-        
+
     }
 
     public String writeDetails()
@@ -56,12 +56,18 @@ public class TICKETORDER
     {
         return methodOfPurchase ;
     }
-    
- public char getPURCHASE ()
- { 
-    return purchase ;
+
+    public int getnoOfTickets () 
+
+    {
+        return noOfTickets ;
     }
-    
+
+    public char getPURCHASE ()
+    { 
+        return purchase ;
+    }
+
     public char gettID ()
     {
         return tID    ; 

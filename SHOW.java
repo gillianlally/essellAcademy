@@ -42,7 +42,7 @@ public class SHOW
 
     }
 
-    private void Ticketorder() throws IOException
+    public void Ticketorder() throws IOException
     {
 
         System.out.println("** Preparing to read data file.");
@@ -82,12 +82,12 @@ public class SHOW
 
             if (ticketorderlist[i].gettID() == 'T' || ticketorderlist[i].gettID() == 'W')
             { 
-                Total = Total + 5;
+                Total = Total + (5 * ticketorderlist[i].getnoOfTickets()) ;
                 // *display the details for the member
             }
             else 
             {
-                Total = Total + 10;
+                Total = Total + (10 * ticketorderlist[i].getnoOfTickets()) ;
                 //resultsFile.writeCSVtable(fileContent);
             }
 
