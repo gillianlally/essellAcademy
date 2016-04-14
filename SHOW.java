@@ -65,7 +65,7 @@ public class SHOW
         String fileContent = "";
 
         // start the count
-        int vcount = 0;
+        int count = 0;
 
         // loop for each item : member
         for (int i = 0; i < noOfTicketsOrdered; i++)
